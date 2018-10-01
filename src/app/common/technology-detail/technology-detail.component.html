@@ -1,6 +1,9 @@
 <div class="tech-container">
   <div class="logo">
-    <img *ngFor="let logo of technology.logo" [src]="logo">
+    <ng-container *ngIf="technology.logo[0]; else loading">
+      <img *ngFor="let logo of technology.logo" [src]="logo">
+
+    </ng-container>
   </div>
 
   <div class="detail-container">
@@ -9,7 +12,8 @@
         {{technology.name | titlecase}}
       </div>
       <div class="progress-bar">
-        <app-svg-viewer [svgSpecs]="{experience: technology.experience, expColor: technology.expColor}"></app-svg-viewer>
+        <app-svg-viewer
+          [svgSpecs]="{experience: technology.experience, expColor: technology.expColor}"></app-svg-viewer>
       </div>
     </div>
     <div class="description">
@@ -19,3 +23,7 @@
     </div>
   </div>
 </div>
+
+<ng-template #loading>
+  <app-loader></app-loader>
+</ng-template>

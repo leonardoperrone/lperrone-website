@@ -15,9 +15,13 @@
   }
 }
 
+.hello {
+  font-size: 30px;
+  font-style: italic;
+}
+
 .about-description {
   text-align: left;
-
 }
 
 .about-container, .email-field {
@@ -97,6 +101,7 @@
   border: none;
   margin-right: 10px;
   vertical-align: bottom;
+  font-weight: bold;
 }
 
 @media screen and (max-width: 1440px) {
@@ -159,7 +164,10 @@
 
 @media screen and (max-width: 375px) {
   .photo-caption {
-    font-size: 14px;
+    font-size: 9px;
+  }
+  .fa-external-link-alt {
+    font-size: 11px;
   }
 }
 
