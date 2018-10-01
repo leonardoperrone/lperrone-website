@@ -1,6 +1,8 @@
 <div class="tech-container">
   <div class="logo">
-    <img *ngFor="let logo of technology.logo" [src]="logo">
+    <ng-container *ngIf="technology.logo[0]; else loading">
+      <img *ngFor="let logo of technology.logo" [src]="logo">
+    </ng-container>
   </div>
 
   <div class="detail-container">
@@ -20,3 +22,7 @@
     </div>
   </div>
 </div>
+
+<ng-template #loading>
+  <app-loader></app-loader>
+</ng-template>
