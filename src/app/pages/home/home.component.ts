@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { TechnologyService } from '../../services/technology.service';
-import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-home',
@@ -10,14 +9,17 @@ import { Observable } from 'rxjs';
 export class HomeComponent implements OnInit {
 
   public technologies: Technology[];
-  public loaded =  false;
+  public loaded = false;
+
   constructor(private technologyService: TechnologyService) {
   }
 
   ngOnInit() {
     this.technologyService.getTechnologies().subscribe((res) => {
       this.technologies = res;
-      this.loaded = true;
+      if (this.technologies) {
+        this.loaded = true;
+      }
     });
   }
 
