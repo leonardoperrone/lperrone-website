@@ -97,15 +97,22 @@
   }
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 375px) {
   .tech-container {
     display: inline;
   }
-    .logo {
+  .logo {
     white-space: nowrap;
-      img {
-        margin-bottom: 20px;
-        margin-right: 10px;
-      }
+    margin-left: 55px;
+    img {
+      margin-bottom: 20px;
+      margin-right: 10px;
+    }
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .logo {
+    margin-left: 10px;
   }
 }
