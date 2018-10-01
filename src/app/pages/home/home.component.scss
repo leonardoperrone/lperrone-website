@@ -69,6 +69,23 @@
   }
 }
 
+@media screen and (max-width: 1440px) {
+  .grid {
+    grid-template-columns: repeat(2, 500px);
+    grid-column-gap: 90px;
+  }
+  .legend-container {
+    width: 1000px;
+    grid-template-columns: 180px 1fr 20px;
+    .legend-svg-logo {
+      margin-left: 60px;
+    }
+    .scale-bar {
+      width: 750px;
+    }
+  }
+}
+
 @media screen and (max-width: 1024px) {
   .grid {
     grid-template-columns: repeat(1, auto);

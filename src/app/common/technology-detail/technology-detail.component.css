@@ -77,14 +77,18 @@
     display: inline-block;
     vertical-align: middle;
     float: none; } }
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 375px) {
   .tech-container {
     display: inline; }
 
   .logo {
-    white-space: nowrap; }
+    white-space: nowrap;
+    margin-left: 55px; }
     .logo img {
       margin-bottom: 20px;
       margin-right: 10px; } }
+@media screen and (max-width: 320px) {
+  .logo {
+    margin-left: 10px; } }
 
 /*# sourceMappingURL=technology-detail.component.css.map */

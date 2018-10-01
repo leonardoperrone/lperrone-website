@@ -2,7 +2,7 @@
   font-family: "Avenir Next", sans-serif;
   color: #000000;
   letter-spacing: 0;
-  width: 582px;
+  //width: 582px;
   height: 580px;
 }
 
@@ -52,6 +52,23 @@
   margin-left: 25px;
   margin-top: 40px;
   margin-right: 25px;
+}
+
+@media screen and (max-width: 1440px) {
+  .detail-container {
+    width: 400px;
+  }
+
+  .title {
+    max-width: 220px;
+    font-size: 25px;
+  }
+  .logo {
+    width: 70px;
+  }
+  .description {
+    font-size: 16px;
+  }
 }
 
 @media screen and (max-width: 1024px) {
