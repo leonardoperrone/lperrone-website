@@ -35,10 +35,12 @@
 
       <p> If you would like to know<strong> more about me</strong> you can reach me through the<strong> email</strong> displayed below or through my
         LinkedIn
-        <a class="linkedin-link" href="https://www.linkedin.com/in/leonardo-perrone-123456/" target="_blank">
+        <a placement="top" ngbTooltip="Instagram" class="linkedin-link" href="https://www.linkedin.com/in/leonardo-perrone-123456/" target="_blank">
           <i class="fab fa-linkedin"></i>
         </a>
       </p>
+
+      <p class="skill-link-paragraph"> Meanwhile you can checkout my skill set <a class="skill-link" routerLink="/skills"><i class="fas fa-laptop"></i></a></p>
 
       <div class="contact-detail">
 
@@ -49,7 +51,7 @@
         </button>
         <div id="collapseEmail" [ngbCollapse]="isCollapsed">
           <input #email class="email-field" readonly type="text" [value]="first + '@' + last">
-          <button #copy class="btn btn-outline-dark btn-copy" type="button" *ngIf="!isCollapsed" (click)="copyEmail()">
+          <button #copy class="btn btn-outline-dark btn-copy" placement="top" ngbTooltip="Copy" type="button" *ngIf="!isCollapsed" (click)="copyEmail()">
             <i
               class="far fa-clone"></i></button>
         </div>

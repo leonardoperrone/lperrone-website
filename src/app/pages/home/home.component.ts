@@ -19,6 +19,7 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit() {
+    document.body.scrollTop = document.documentElement.scrollTop = 0;
     this.technologyService.getTechnologies().subscribe((res) => {
       this.technologies = res;
       if (this.technologies) {

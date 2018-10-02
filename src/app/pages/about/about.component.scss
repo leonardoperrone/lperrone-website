@@ -50,7 +50,7 @@
   font-size: 14px;
 }
 
-.marcello-ig-link {
+.marcello-ig-link, .skill-link {
   color: #000;
   &:hover {
     color: #979797;
@@ -59,10 +59,21 @@
 
 .linkedin-link {
   color: #0077B5;
-  font-size: 23px;
   &:hover {
     color: #00A0DC;
   }
+}
+
+.fa-external-link-alt {
+  font-size: 14px;
+}
+
+.linkedin-link, .skill-link {
+  font-size: 23px;
+}
+
+.fa-clone {
+  font-size: 16px;
 }
 
 .contact-detail {
@@ -84,10 +95,6 @@
   border: none;
 }
 
-.fa-clone {
-  font-size: 16px;
-}
-
 .email-container {
   grid-column: 1 / -1;
   grid-row: 2;
@@ -102,6 +109,10 @@
   margin-right: 10px;
   vertical-align: bottom;
   font-weight: bold;
+}
+
+.skill-link-paragraph {
+  margin-top: 50px;
 }
 
 @media screen and (max-width: 1440px) {
