@@ -1,7 +1,7 @@
 <div class="tech-container">
   <div class="logo">
     <ng-container *ngIf="technology.logo[0]; else loading">
-      <img *ngFor="let logo of technology.logo" [src]="logo">
+      <img *ngFor="let logo of technology.logo" [src]="logo" alt="Logo + {{technology.name}}">
     </ng-container>
   </div>
 
