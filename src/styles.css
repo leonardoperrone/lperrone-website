@@ -1,3 +1,21 @@
 body {
   font-family: "Avenir Next", sans-serif;
+  font-size: 20px;
+}
+
+body nav .navbar-nav .nav-item .nav-link {
+  font-size: 23px;
+}
+@media screen and (max-width: 768px) {
+  body nav .navbar-nav .nav-item .nav-link {
+    margin-top: 15px;
+    font-size: 27px;
+  }
+
+}
+
+@media screen and (max-width: 425px) {
+  body nav .navbar-nav .nav-item .nav-link.menu-item {
+    font-size: 28px;
+  }
 }
