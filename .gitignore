@@ -39,7 +39,7 @@ testem.log
 /e2e/*.map
 
 #css
-/src/app/*.css
+/src/app/**/*.css
 
 # System Files
 .DS_Store
