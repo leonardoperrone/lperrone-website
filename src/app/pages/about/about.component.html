@@ -43,6 +43,21 @@
       </div>
     </div>
 
+    <div class="card  text-center">
+      <div class="card-header">
+        My journey so far...
+      </div>
+      <div class="card-body">
+
+        <p class="card-text">
+          Meanwhile you can checkout my skill set and see the different technlogies I have had the please to encounter
+          on my path
+        </p>
+      </div>
+      <a class="skill-link" routerLink="/skills">
+        <i class="fas fa-laptop"></i>
+      </a>
+    </div>
     <div class="card text-center">
       <div class="card-header">
         Get in touch!
@@ -67,7 +82,7 @@
           <span> {{showButtonText}}</span>
         </button>
         <div [ngbCollapse]="isCollapsed" id="collapseEmail">
-          <input #email [value]="first + '@' + last" class="email-field" readonly type="text">
+          <input #email [value]="first + '@' + last" class="email-field" readonly type="text"/>
           <button #copy (click)="copyEmail()" *ngIf="!isCollapsed" class="btn btn-outline-dark btn-copy"
                   ngbTooltip="Copy"
                   placement="top" type="button">
@@ -77,21 +92,6 @@
       </div>
     </div>
 
-    <div class="card  text-center">
-      <div class="card-header">
-        My journey so far...
-      </div>
-      <div class="card-body">
-
-        <p class="card-text">
-          Meanwhile you can checkout my skill set and see the different technlogies I have had the please to encounter
-          on my path
-        </p>
-      </div>
-      <a class="skill-link" routerLink="/skills">
-        <i class="fas fa-laptop"></i>
-      </a>
-    </div>
 
   </div>
 </div>

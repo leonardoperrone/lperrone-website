@@ -13,8 +13,10 @@ export class HomeComponent implements OnInit {
   public loaded = false;
 
   constructor(private meta: Meta, private technologyService: TechnologyService) {
-    this.meta.addTag({ name: 'keywords', content: 'Leonardo, Perrone, leonardoperrone, wichita state, developer, software' });
-    this.meta.addTag({ name: 'description', content: 'Landing page for Leonardo Perrone own website, it displays some of his skills and background'});
+    this.meta.addTag({ name: 'keywords', content: 'Leonardo, Perrone, ' +
+        'leonardoperrone, wichita state, developer, software' });
+    this.meta.addTag({ name: 'description', content: 'Landing page for ' +
+        'Leonardo Perrone own website, it displays some of his skills and background'});
     this.meta.addTag({ name: 'author', content: 'Leonardo Perrone'});
   }
 
