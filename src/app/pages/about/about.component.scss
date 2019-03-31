@@ -10,9 +10,9 @@
   grid-row-gap: 50px;
   justify-content: center;
   margin: 0 100px;
-  p {
-    line-height: 30px;
-  }
+  //p {
+  //  line-height: 30px;
+  //}
 }
 
 .hello {
@@ -27,7 +27,6 @@
 .about-container, .email-field {
   font-family: "Charter", sans-serif;
   color: #000000;
-  font-size: 25px;
   letter-spacing: 2px;
 
 }
@@ -50,6 +49,12 @@
   font-size: 14px;
 }
 
+.fa-laptop {
+  font-size: 3rem;
+  margin-bottom: 30px;
+  margin-top: 20px;
+}
+
 .marcello-ig-link, .skill-link {
   color: #000;
   &:hover {
@@ -68,16 +73,21 @@
   font-size: 14px;
 }
 
-.linkedin-link, .skill-link {
-  font-size: 23px;
+.fa-linkedin {
+  font-size: 1.5rem;
 }
 
+.skill-link {
+  width: 100px;
+  margin: auto;
+}
 .fa-clone {
   font-size: 16px;
 }
 
 .contact-detail {
-  margin-top: 60px;
+  margin-top: 20px;
+  margin-bottom: 30px;
 }
 
 .btn {

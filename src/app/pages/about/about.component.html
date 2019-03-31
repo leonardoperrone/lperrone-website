@@ -6,57 +6,147 @@
 
   <div class="about-container">
     <div class="profile-pic">
-      <img src="assets/profile-pic.jpg" alt="Profile Pic">
+      <img alt="Profile Pic" src="assets/profile-pic.jpg">
       <span class="photo-caption">
         Photo credit: Marcello Munari
-        <a class="marcello-ig-link" href="https://www.instagram.com/thewisdomwhisperer/?hl=en" target="_blank" rel="noreferrer">
+        <a class="marcello-ig-link" href="https://www.instagram.com/thewisdomwhisperer/?hl=en" rel="noreferrer"
+           target="_blank">
         <i class="fas fa-external-link-alt"></i>
       </a>
       </span>
     </div>
-    <div class="about-description">
-      <p class="hello"> Hello visitor, </p>
-      <br>
-      <p> my name is<strong> Leonardo Perrone</strong> and I am a young<strong> software developer</strong> that just started his career in
-        this wonderful field. When I was younger, I felt a strong connection with technology and computers so I decided
-        to pursue a degree related to this subject. </p>
-      <p>A few years after, I completed a <strong>Bachelor’s</strong> of Science in <strong>Computer
-        Engineering</strong> at Wichita State University in the sunflower state of Kansas. I was also able to complete a<strong> minor</strong> in
-        <strong>Management Information Systems </strong>, which gave me my first exposure to relational databases and VB.
-      </p>
-      <p>
-        I believe that software developers and engineers are not only the gears that make our world go on, but also the
-        ones that show the world that nothing is impossible in terms of innovation. You think it, they’ll do it. With
-        this in mind I hope that someday I will be part of the innovation that will affect the upcoming generations.
-      </p>
+    <!--    <div class="about-description">-->
+    <!--      <p class="hello"> Hello visitor, </p>-->
+    <!--      <br>-->
+    <!--      <p> my name is<strong> Leonardo Perrone</strong> and I am a young<strong> software developer</strong> that just-->
+    <!--        started his career in-->
+    <!--        this wonderful field. When I was younger, I felt a strong connection with technology and computers so I decided-->
+    <!--        to pursue a degree related to this subject. </p>-->
+    <!--      <p>A few years after, I completed a <strong>Bachelor’s</strong> of Science in <strong>Computer-->
+    <!--        Engineering</strong> at Wichita State University in the sunflower state of Kansas. I was also able to complete a<strong>-->
+    <!--        minor</strong> in-->
+    <!--        <strong>Management Information Systems </strong>, which gave me my first exposure to relational databases and-->
+    <!--        VB.-->
+    <!--      </p>-->
+    <!--      <p>-->
+    <!--        I believe that software developers and engineers are not only the gears that make our world go on, but also the-->
+    <!--        ones that show the world that nothing is impossible in terms of innovation. You think it, they’ll do it. With-->
+    <!--        this in mind I hope that someday I will be part of the innovation that will affect the upcoming generations.-->
+    <!--      </p>-->
 
+    <!--    </div>-->
+    <div class="card">
+      <div class="card-body">
+        <h4 class="card-title ml-3">Hello Visitor, </h4>
+        <br>
+        <p class="card-text ml-3 mr-3">
+          my name is<strong> Leonardo Perrone</strong> and I am a young<strong> software developer</strong> that just
+          started his career in
+          this wonderful field. When I was younger, I felt a strong connection with technology and computers so I
+          decided
+          to pursue a degree related to this subject. </p>
+        <p class="card-text ml-3 mr-3">A few years after, I completed a <strong>Bachelor’s</strong> of Science in
+          <strong>Computer
+            Engineering</strong> at Wichita State University in the sunflower state of Kansas. I was also able to
+          complete
+          a<strong> minor</strong> in
+          <strong>Management Information Systems </strong>, which gave me my first exposure to relational databases and
+          VB.
+        </p>
+        <p class="card-text ml-3 mr-3">
+          I believe that software developers and engineers are not only the gears that make our world go on, but also
+          the
+          ones that show the world that nothing is impossible in terms of innovation. You think it, they’ll do it. With
+          this in mind I hope that someday I will be part of the innovation that will affect the upcoming generations.
+        </p>
+      </div>
     </div>
-    <div class="email-container">
 
-      <p> If you would like to know<strong> more about me</strong> you can reach me through the<strong> email</strong> displayed below or through my
-        LinkedIn
-        <a class="linkedin-link" href="https://www.linkedin.com/in/leonardo-perrone-123456/" target="_blank" rel="noreferrer">
-          <i class="fab fa-linkedin"></i>
-        </a>
-      </p>
-
-      <p class="skill-link-paragraph"> Meanwhile you can checkout my skill set <a class="skill-link" routerLink="/skills"><i class="fas fa-laptop"></i></a></p>
-
+    <div class="card text-center">
+      <div class="card-header">
+        Get in touch!
+      </div>
+      <div class="card-body">
+        <p class="card-text">
+          If you would like to know<strong> more about me</strong> you can reach me through the<strong> email</strong>
+          displayed below or through my
+          LinkedIn
+          <a class="linkedin-link" href="https://www.linkedin.com/in/leonardo-perrone-123456/" rel="noreferrer"
+             target="_blank">
+            <i class="fab fa-linkedin"></i>
+          </a>
+        </p>
+      </div>
       <div class="contact-detail">
 
 
-        <button *ngIf="isCollapsed" type="button" class="btn btn-outline-dark btn-show" (click)="showEmail()"
-                [attr.aria-expanded]="!isCollapsed" aria-controls="collapseEmail">
+        <button (click)="showEmail()" *ngIf="isCollapsed" [attr.aria-expanded]="!isCollapsed"
+                aria-controls="collapseEmail"
+                class="btn btn-outline-dark btn-show" type="button">
           <span> {{showButtonText}}</span>
         </button>
-        <div id="collapseEmail" [ngbCollapse]="isCollapsed">
-          <input #email class="email-field" readonly type="text" [value]="first + '@' + last">
-          <button #copy class="btn btn-outline-dark btn-copy" placement="top" ngbTooltip="Copy" type="button" *ngIf="!isCollapsed" (click)="copyEmail()">
+        <div [ngbCollapse]="isCollapsed" id="collapseEmail">
+          <input #email [value]="first + '@' + last" class="email-field" readonly type="text">
+          <button #copy (click)="copyEmail()" *ngIf="!isCollapsed" class="btn btn-outline-dark btn-copy"
+                  ngbTooltip="Copy"
+                  placement="top" type="button">
             <i
               class="far fa-clone"></i></button>
         </div>
       </div>
     </div>
+
+
+    <div class="card  text-center">
+      <div class="card-header">
+        My journey so far...
+      </div>
+      <div class="card-body">
+
+        <p class="card-text">
+          Meanwhile you can checkout my skill set and see the different technlogies I have had the please to encounter
+          on my path
+        </p>
+      </div>
+      <a class="skill-link" routerLink="/skills">
+        <i class="fas fa-laptop"></i>
+      </a>
+
+    </div>
+
+    <!--    <div class="email-container">-->
+
+    <!--      <p> If you would like to know<strong> more about me</strong> you can reach me through the<strong> email</strong>-->
+    <!--        displayed below or through my-->
+    <!--        LinkedIn-->
+    <!--        <a class="linkedin-link" href="https://www.linkedin.com/in/leonardo-perrone-123456/" rel="noreferrer"-->
+    <!--           target="_blank">-->
+    <!--          <i class="fab fa-linkedin"></i>-->
+    <!--        </a>-->
+    <!--      </p>-->
+
+    <!--      <p class="skill-link-paragraph"> Meanwhile you can checkout my skill set <a class="skill-link"-->
+    <!--                                                                                  routerLink="/skills"><i-->
+    <!--        class="fas fa-laptop"></i></a></p>-->
+
+    <!--      <div class="contact-detail">-->
+
+
+    <!--        <button (click)="showEmail()" *ngIf="isCollapsed" [attr.aria-expanded]="!isCollapsed"-->
+    <!--                aria-controls="collapseEmail"-->
+    <!--                class="btn btn-outline-dark btn-show" type="button">-->
+    <!--          <span> {{showButtonText}}</span>-->
+    <!--        </button>-->
+    <!--        <div [ngbCollapse]="isCollapsed" id="collapseEmail">-->
+    <!--          <input #email [value]="first + '@' + last" class="email-field" readonly type="text">-->
+    <!--          <button #copy (click)="copyEmail()" *ngIf="!isCollapsed" class="btn btn-outline-dark btn-copy"-->
+    <!--                  ngbTooltip="Copy"-->
+    <!--                  placement="top" type="button">-->
+    <!--            <i-->
+    <!--              class="far fa-clone"></i></button>-->
+    <!--        </div>-->
+    <!--      </div>-->
+    <!--    </div>-->
   </div>
 </div>
 

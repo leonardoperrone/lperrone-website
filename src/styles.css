@@ -16,6 +16,6 @@ body nav .navbar-nav .nav-item .nav-link {
 
 @media screen and (max-width: 425px) {
   body nav .navbar-nav .nav-item .nav-link.menu-item {
-    font-size: 28px;
+    font-size: 20px;
   }
 }
