@@ -7,17 +7,14 @@ import { CommonModule } from '@angular/common';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
-  { path: 'home', component:  AboutComponent},
+  { path: 'home', component: AboutComponent },
   { path: 'skills', component: HomeComponent }
 ];
 
 @NgModule({
-  imports: [CommonModule,RouterModule.forRoot(routes,{useHash:true})],
+  imports: [CommonModule, RouterModule.forRoot(routes, { useHash: true })],
   exports: [RouterModule],
 })
 
 export class AppRoutingModule {
 }
-
-
-
