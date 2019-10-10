@@ -15,9 +15,8 @@
   //}
 }
 
-.hello {
-  font-size: 30px;
-  font-style: italic;
+.about-title {
+  font-size: 2rem;
 }
 
 .about-description {
@@ -25,9 +24,8 @@
 }
 
 .about-container, .email-field {
-  font-family: "Charter", sans-serif;
   color: #000000;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
 
 }
 
@@ -134,7 +132,7 @@
     text-align: center;
   }
   .profile-pic {
-    width: 80%;
+    //width: 80%;
     margin-right: auto;
     margin-left: auto;
   }

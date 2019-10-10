@@ -1,6 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { TechnologyService } from '../../services/technology.service';
-import { Meta } from '@angular/platform-browser';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import Typed from 'typed.js';
 
 @Component({
   selector: 'app-home',
@@ -8,26 +7,23 @@ import { Meta } from '@angular/platform-browser';
   styleUrls: ['./home.component.scss', '../../app.component.scss']
 })
 export class HomeComponent implements OnInit {
+  @ViewChild('copy') copy: ElementRef;
 
-  public technologies: Technology[];
-  public loaded = false;
 
-  constructor(private meta: Meta, private technologyService: TechnologyService) {
-    this.meta.addTag({ name: 'keywords', content: 'Leonardo, Perrone, ' +
-        'leonardoperrone, wichita state, developer, software' });
-    this.meta.addTag({ name: 'description', content: 'Landing page for ' +
-        'Leonardo Perrone own website, it displays some of his skills and background'});
-    this.meta.addTag({ name: 'author', content: 'Leonardo Perrone'});
+  constructor() {
   }
 
   ngOnInit() {
     document.body.scrollTop = document.documentElement.scrollTop = 0;
-    this.technologyService.getTechnologies().subscribe((res) => {
-      this.technologies = res;
-      if (this.technologies) {
-        this.loaded = true;
-      }
+    const typedString = 'I am a Web Developer, I am a Passionate Engineer, I am a Technology Enthusiast';
+    const typed = new Typed('#typed', {
+      strings: typedString.split(','),
+      typeSpeed: 80,
+      loop: true,
+      backDelay: 1100,
+      backSpeed: 30
     });
   }
+
 
 }

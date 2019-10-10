@@ -1,24 +1,30 @@
-<nav class="navbar navbar-expand-lg navbar-dark navbar-light fixed-top nav-bg">
+<nav #navbar [ngClass]="isHomeActive ? 'nav-home' : 'nav-dark-bg'"
+     class="navbar navbar-expand-lg navbar-dark navbar-light fixed-top ">
   <a class="nav-link home" routerLink="/home">
-    <img src="assets/logo.png" alt="LP logo" data-toggle="collapse" data-target=".navbar-collapse.show">
+    <img alt="LP logo" data-target=".navbar-collapse.show" data-toggle="collapse" src="assets/logo.png" (click)="checkMenuCollapse('logo-link')">
   </a>
-  <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
-          aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation" id="navbar-collapse">
+  <button #navbarMenuButton (click)="checkMenuCollapse('menu-button')"
+          [attr.aria-expanded]="!isCollapsed"
+          aria-label="Toggle navigation" class="navbar-toggler custom-toggler" aria-controls="navbarNavDropdown"
+          id="navbar-collapse" type="button">
     <span class="navbar-toggler-icon"></span>
   </button>
-  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+  <div class="collapse navbar-collapse" id="navbarNavDropdown" [ngbCollapse]="isCollapsed">
     <ul class="navbar-nav">
-      <li class="nav-item active" data-toggle="collapse" data-target=".navbar-collapse.show">
+      <li class="nav-item" data-target=".navbar-collapse.show" data-toggle="collapse">
         <a class="nav-link menu-item" routerLink="/home">Home <span class="sr-only">(current)</span></a>
       </li>
-      <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
+      <li class="nav-item" data-target=".navbar-collapse.show" data-toggle="collapse">
         <a class="nav-link menu-item" routerLink="/skills">Skills</a>
+      </li>
+      <li class="nav-item" data-target=".navbar-collapse.show" data-toggle="collapse">
+        <a class="nav-link menu-item" routerLink="/about">About</a>
       </li>
     </ul>
   </div>
 </nav>
 
-<main class="container-main">
+<main class="">
   <router-outlet></router-outlet>
-  <app-footer></app-footer>
+  <app-footer *ngIf="!isHomeActive"></app-footer>
 </main>
