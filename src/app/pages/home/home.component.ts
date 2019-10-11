@@ -15,7 +15,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
     document.body.scrollTop = document.documentElement.scrollTop = 0;
-    const typedString = 'I am a Web Developer, I am a Passionate Engineer, I am a Technology Enthusiast';
+    const typedString = 'Web Developer, Passionate Engineer, Technology Enthusiast';
     const typed = new Typed('#typed', {
       strings: typedString.split(','),
       typeSpeed: 80,
