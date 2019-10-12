@@ -36,12 +36,15 @@
     float: right;
     width: 964px;
     margin-right: 50px;
+
     img {
       width: 100%;
     }
   }
+
   .info-container {
     position: relative;
+
     .legend-tooltip {
       position: absolute;
       bottom: 0;
@@ -64,6 +67,7 @@
 .legend-tooltip-link {
   color: #979797;
   text-decoration: none;
+
   &:hover {
     color: #4A4A4A;
   }
@@ -71,15 +75,17 @@
 
 @media screen and (max-width: 1440px) {
   .grid {
-    grid-template-columns: repeat(2, 500px);
-    grid-column-gap: 90px;
+    grid-template-columns: repeat(2, 450px);
+    grid-column-gap: 50px;
   }
   .legend-container {
     width: 1000px;
     grid-template-columns: 180px 1fr 20px;
+
     .legend-svg-logo {
       margin-left: 60px;
     }
+
     .scale-bar {
       width: 750px;
     }
@@ -110,32 +116,61 @@
 }
 
 @media screen and (max-width: 768px) {
+  //.legend-container {
+  //  width: 682px;
+  //
+  //  .scale-bar {
+  //    width: 470px;
+  //  }
+  //}
+
   .legend-container {
-    width: 682px;
+    width: 350px;
+    height: 80px;
+    grid-template-columns: 1fr;
+    //.legend-svg-logo {
+    //  margin-left: 10px;
+    //  margin-right: 20px;
+    //  width: 50px;
+    //}
+    .legend-svg-logo {
+      display: none;
+    }
 
     .scale-bar {
-      width: 470px;
+      width: 280px;
+      margin-left: auto;
+      margin-right: auto;
+      grid-row: 1;
     }
   }
 }
 
 @media screen and (max-width: 425px) {
   .legend-container {
-    width: 420px;
-    height: 90px;
-    grid-template-columns: .5fr 1fr 1px;
+    width: 350px;
+    height: 80px;
+    grid-template-columns: 1fr;
+    //.legend-svg-logo {
+    //  margin-left: 10px;
+    //  margin-right: 20px;
+    //  width: 50px;
+    //}
     .legend-svg-logo {
-      margin-left: 10px;
-      margin-right: 20px;
-      width: 50px;
+      display: none;
     }
+
     .scale-bar {
       width: 280px;
+      margin-left: auto;
+      margin-right: auto;
+      grid-row: 1;
     }
   }
 
   .legend-container .info-container .legend-tooltip {
-    padding: 5px 0;
+    padding: 5px 5px;
+    font-size: 12px;
   }
 }
 
@@ -148,22 +183,25 @@
     width: 310px;
     height: 90px;
     grid-template-rows: auto;
-    grid-template-columns: 1fr;
-    .legend-svg-logo {
-      display: none;
-    }
+    grid-template-columns: auto;
+
     .scale-bar {
       margin-left: auto;
       margin-right: auto;
       grid-row: 1;
+      grid-column: 1/5;
     }
   }
 
   .tech-item {
     margin-bottom: 100px;
+
   }
+
   .info-container {
-    grid-row: 2;
+    grid-row: 1;
+    grid-column: 5;
+
 
   }
   .legend-container .info-container .legend-tooltip {

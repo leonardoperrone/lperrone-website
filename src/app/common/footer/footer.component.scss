@@ -20,3 +20,8 @@ footer {
     text-align: center;
   }
 }
+@media screen and (max-width: 320px) {
+  .footer p {
+    font-size: 10px;
+  }
+}
