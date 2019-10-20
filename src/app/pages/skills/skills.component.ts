@@ -8,7 +8,6 @@ import { TechnologyService } from '../../services/technology.service';
   styleUrls: ['./skills.component.scss', '../../app.component.scss']
 })
 export class SkillsComponent implements OnInit {
-
   public technologies: Technology[];
   public loaded = false;
 
