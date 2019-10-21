@@ -18,6 +18,7 @@ import { FooterComponent } from './common/footer/footer.component';
 import { SkillsComponent } from './pages/skills/skills.component';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
+import { ProjectsComponent } from './pages/projects/projects.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { AngularFireDatabaseModule } from '@angular/fire/database';
     SvgViewerComponent,
     LoaderComponent,
     FooterComponent,
-    SkillsComponent
+    SkillsComponent,
+    ProjectsComponent
   ],
   imports: [
     BrowserModule,

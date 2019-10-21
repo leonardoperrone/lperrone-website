@@ -17,7 +17,9 @@ export class AppComponent implements OnInit {
   constructor(private router: Router, private renderer: Renderer2) {
     router.events.filter(event => event instanceof NavigationEnd)
       .subscribe((event: NavigationEnd) => {
-        this.isHomeActive = event.url.endsWith('home');
+        this.isHomeActive = event.urlAfterRedirects.endsWith('home');
+        console.log(event)
+        console.log(this.isHomeActive )
       });
   }
 
