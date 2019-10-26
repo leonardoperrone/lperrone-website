@@ -5,7 +5,7 @@
   <hr class="separator">
   <app-loader *ngIf="!loaded"></app-loader>
   <div *ngIf="loaded" class="grid">
-    <div *ngFor="let project of projects" class="tech-item">
+    <div *ngFor="let project of projects" class="project-item">
       <app-project-detail [project]="project"></app-project-detail>
     </div>
   </div>
