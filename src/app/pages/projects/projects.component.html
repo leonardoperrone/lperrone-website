@@ -1,6 +1,12 @@
-<div class="placeholder-container">
-  <div>
-    <h1> Projects coming soon...</h1>
+<div class="container-main">
+  <div class="page-title">
+    <h1> Projects </h1>
   </div>
- <div class="placeholder"></div>
+  <hr class="separator">
+  <app-loader *ngIf="!loaded"></app-loader>
+  <div *ngIf="loaded" class="grid">
+    <div *ngFor="let project of projects" class="tech-item">
+      <app-project-detail [project]="project"></app-project-detail>
+    </div>
+  </div>
 </div>

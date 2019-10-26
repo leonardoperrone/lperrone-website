@@ -1,0 +1,37 @@
+<div class="tech-container">
+  <div class="logo">
+    <ng-container *ngIf="project.logos[0]; else loading">
+      <img *ngFor="let logo of project.logos" [src]="logo" alt="Logo {{project.name}}">
+    </ng-container>
+  </div>
+
+  <div class="detail-container">
+    <div class="tech-header">
+      <div class="title">
+        {{project.name | titlecase}}
+      </div>
+      <div class="location">
+        {{project.city | titlecase}}, {{project.country | titlecase}} - <span class="description-year">{{project.year}}</span>
+      </div>
+    </div>
+    <div class="description-container">
+      <p [@collapseExpand]="isCollapsed ? 'collapsed' : 'expanded'" [ngClass]="{'description-collapsed': isCollapsed && isLongDescription}"
+         class="description">
+        {{project.description}}
+      </p>
+      <button (click)="toggle()" *ngIf="isLongDescription" class="btn btn-outline-dark"
+              type="button"> {{isCollapsed ? 'Show more' : 'Show less'}}</button>
+    </div>
+  </div>
+  <div class="project-picture-container">
+    <div class="project-picture">
+      <ng-container *ngIf="project.pictures[0]">
+        <img *ngFor="let picture of project.pictures" [src]="picture" alt="Project picture">
+      </ng-container>
+    </div>
+  </div>
+</div>
+
+<ng-template #loading>
+  <app-loader></app-loader>
+</ng-template>

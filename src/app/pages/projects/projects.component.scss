@@ -1,0 +1,11 @@
+.grid {
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: 1fr;
+  grid-column-gap: 96px;
+  justify-content: center;
+}
+
+.tech-item {
+  margin-bottom: 135px;
+}

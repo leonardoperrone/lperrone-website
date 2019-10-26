@@ -46,7 +46,7 @@
   padding: 25px;
 }
 
-.description {
+.description-container {
   width: auto;
   font-size: 18px;
   color: #4A4A4A;
@@ -78,7 +78,7 @@
       float: none;
     }
   }
-  .description {
+  .description-container {
     font-size: 16px;
   }
 
@@ -190,7 +190,7 @@
     }
   }
 
-  .detail-container .description {
+  .detail-container .description-container {
     margin-top: 25px;
   }
 
