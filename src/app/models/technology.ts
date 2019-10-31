@@ -1,7 +1,8 @@
 interface Technology {
-  name: string;
-  experience: string;
-  expColor: string;
-  logo: string[];
   description: string;
+  expColor: string;
+  experience: number;
+  logos: string[];
+  name: string;
+  orderIndex: number;
 }

@@ -18,8 +18,6 @@ export class AppComponent implements OnInit {
     router.events.filter(event => event instanceof NavigationEnd)
       .subscribe((event: NavigationEnd) => {
         this.isHomeActive = event.urlAfterRedirects.endsWith('home');
-        console.log(event)
-        console.log(this.isHomeActive )
       });
   }
 
@@ -28,7 +26,6 @@ export class AppComponent implements OnInit {
 
   checkMenuCollapse(source: string) {
     this.isCollapsed = source === 'logo-link' ? true : !this.isCollapsed;
-    console.log((this.isCollapsed));
     if (!this.isCollapsed) {
       this.renderer.addClass(this.navbar.nativeElement, 'navbar-arie-expanded');
     } else {

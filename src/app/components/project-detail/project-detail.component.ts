@@ -13,17 +13,7 @@ import { state, style, trigger } from '@angular/animations';
       state('expanded', style({
         height: 'auto',
         overflow: 'visible'
-      })),
-      // transition('* => *', [
-      //   animate('2s ease-out')
-      // ]),
-      // transition('expanded => collapsed', [
-      //   animate('2s ease',
-      //   style({
-      //     height: '150px',
-      //     overflow: 'hidden'
-      //   }))
-      // ])
+      }))
     ]),
   ],
   templateUrl: './project-detail.component.html',

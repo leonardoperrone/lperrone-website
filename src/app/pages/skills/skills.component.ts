@@ -25,8 +25,8 @@ export class SkillsComponent implements OnInit {
 
   ngOnInit() {
     document.body.scrollTop = document.documentElement.scrollTop = 0;
-    this.technologyService.getTechnologies().subscribe((res) => {
-      this.technologies = res;
+    this.technologyService.getTechnologies().subscribe(res => {
+      this.technologies = res.data.docs;
       if (this.technologies) {
         this.loaded = true;
       }

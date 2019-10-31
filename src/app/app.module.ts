@@ -20,6 +20,7 @@ import { AngularFireModule } from '@angular/fire';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { ProjectsComponent } from './pages/projects/projects.component';
 import { ProjectDetailComponent } from './components/project-detail/project-detail.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -39,6 +40,7 @@ import { ProjectDetailComponent } from './components/project-detail/project-deta
     BrowserAnimationsModule,
     AppRoutingModule,
     NgbModule,
+    HttpClientModule,
     AngularFireModule.initializeApp(environment.firebase, 'leonardo-web'),
     AngularFireDatabaseModule,
     MatCheckboxModule,

@@ -3,7 +3,8 @@ export class Project {
   description: string;
   city: string;
   country: string;
-  year: number
+  year: number;
   logos: string[];
+  orderIndex: number;
   pictures?: string;
 }

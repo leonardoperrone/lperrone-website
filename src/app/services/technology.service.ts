@@ -1,14 +1,17 @@
 import { Injectable } from '@angular/core';
-import { AngularFireDatabase } from '@angular/fire/database';
+import { HttpClient } from '@angular/common/http';
+import { environment } from '../../environments/environment';
+import { Observable } from 'rxjs';
 
 @Injectable()
 export class TechnologyService {
 
-  constructor(private db: AngularFireDatabase) {
+  constructor(private http: HttpClient) {
   }
 
-  public getTechnologies() {
-    return this.db.list<Technology>('technologies').valueChanges();
+  public getTechnologies(): Observable<any> {
+    return this.http.get(`${ environment.apiBaseUrl }/api/v1/technologies`);
+
   }
 
 }

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ProjectService } from '../../services/project.service';
+import { Project } from '../../models/project';
 
 @Component({
   selector: 'app-projects',
@@ -7,14 +8,19 @@ import { ProjectService } from '../../services/project.service';
   styleUrls: ['./projects.component.scss', '../../app.component.scss']
 })
 export class ProjectsComponent implements OnInit {
+  projects: Project[];
   loaded = true;
-  projects = [];
 
   constructor(private projectService: ProjectService) {
   }
 
   ngOnInit() {
-    this.projects = this.projectService.getProjects();
-  }
+    document.body.scrollTop = document.documentElement.scrollTop = 0;
+    this.projectService.getProjects().subscribe(res => {
+      this.projects = res.data.docs;
+      if (this.projects) {
+        this.loaded = true;
+      }
+    });  }
 
 }

@@ -1,5 +1,6 @@
 export const environment = {
   production: true,
+  apiBaseUrl: 'https://lperrone-manage.herokuapp.com',
   firebase: {
     apiKey: 'AIzaSyCMe1lbH-BXhExuK-5MSSAvGq7tsx99PvA',
     authDomain: 'leonardo-web.firebaseapp.com',
