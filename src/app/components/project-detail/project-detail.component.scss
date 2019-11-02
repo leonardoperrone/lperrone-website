@@ -127,8 +127,13 @@
     grid-row: 1;
     display: flex;
     margin-left: 50px;
+    width: 70px;
+    white-space: nowrap;
+
     img {
-      margin-right: 15px;
+      padding-right: 20px;
+      height: 50px;
+      width: unset;
     }
   }
 
@@ -222,20 +227,25 @@
 
   .project-header {
     display: grid;
-    height: 75px;
+    grid-template-columns: 1.4fr .7fr;
+    height: auto;
     margin-bottom: 20px;
     margin-top: 10px;
   }
   .description-year, .location, .title {
     padding: 0;
   }
-
   .title, .location {
-    padding-left: 20px;
+    margin-top: 10px;
 
   }
   .title {
-    margin-top: 10px
+    padding-left: 20px;
+    grid-column: 1;
+  }
+  .location {
+    grid-column: 2;
+    max-width: 100px;
   }
 
   .description-container {
@@ -244,6 +254,14 @@
   .project-picture-container .project-picture {
     margin-right: 10px;
     margin-left: 10px;
+  }
+
+  .project-logo {
+    margin-left: 20px;
+
+    img {
+      height: 30px;
+    }
   }
 }
 
@@ -258,10 +276,11 @@
   }
 
   .project-logo {
-    margin-left: 0;
+    margin-left: 10px;
     width: 60px;
+
     img {
-      margin-right: 15px;
+      margin-right: 8px;
       margin-bottom: 20px;
     }
   }
@@ -271,6 +290,7 @@
     grid-template-columns: 1fr;
     grid-row-gap: 10px;
     margin: 10px 5px;
+
     img {
       width: 100%;
     }
