@@ -172,10 +172,16 @@
   }
 }
 
+@media screen and (max-width: 1440px) {
+  .about-container {
+    width: 1000px;
+  }
+}
+
 @media screen and (max-width: 1024px) {
   .about-container {
     grid-template-columns: 1fr;
-    width: 1000px;
+    width: 760px;
   }
 
   .about-container, .email-field {
@@ -224,7 +230,7 @@
 
 @media screen and (max-width: 768px) {
   .about-container {
-    width: 700px;
+    width: 750px;
   }
 
   .container-main .separator-home {
@@ -258,10 +264,40 @@
 
 }
 
+@media screen and (max-width: 750px) {
+  .about-container {
+    width: 600px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .about-container {
+    width: 560px;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .about-container {
+    width: 480px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .about-container {
+    width: 480px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .about-container {
+    width: 430px;
+  }
+}
+
 @media screen and (max-width: 425px) {
   .about-container {
     margin: 0 20px;
-    width: 400px;
+    width: 360px;
     padding: 0 40px;
   }
 
@@ -284,7 +320,7 @@
 
 @media screen and (max-width: 375px) {
   .about-container {
-    width: 350px;
+    width: 290px;
   }
 
   .photo-caption {
@@ -295,9 +331,33 @@
   }
 }
 
+@media screen and (max-width: 360px) {
+  .about-container {
+    width: 320px;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .about-container {
+    width: 310px;
+  }
+}
+
+@media screen and (max-width: 340px) {
+  .about-container {
+    width: 300px;
+  }
+}
+
+@media screen and (max-width: 330px) {
+  .about-container {
+    width: 290px;
+  }
+}
+
 @media screen and (max-width: 320px) {
   .container-main .separator-home {
-    width: 270px;
+    width: 280px;
   }
   .email-field {
     font-size: 15px;
