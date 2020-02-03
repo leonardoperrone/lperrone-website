@@ -9,7 +9,7 @@ import { Project } from '../../models/project';
 })
 export class ProjectsComponent implements OnInit {
   projects: Project[];
-  loaded = true;
+  loaded = false;
 
   constructor(private projectService: ProjectService) {
   }
@@ -17,10 +17,11 @@ export class ProjectsComponent implements OnInit {
   ngOnInit() {
     document.body.scrollTop = document.documentElement.scrollTop = 0;
     this.projectService.getProjects().subscribe(res => {
-      this.projects = res.data.docs;
+      // this.projects = res.data.docs;
       if (this.projects) {
         this.loaded = true;
       }
-    });  }
+    });
+  }
 
 }

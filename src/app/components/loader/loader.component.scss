@@ -1,5 +1,13 @@
-mat-progress-spinner {
+mat-progress-spinner, .loading-message {
   position: relative;
   margin-right: auto;
   margin-left: auto;
+}
+
+.loading-message {
+  margin-top: 40px;
+}
+
+.loading-text {
+  text-align: center;
 }
