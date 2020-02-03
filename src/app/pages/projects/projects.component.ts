@@ -17,7 +17,7 @@ export class ProjectsComponent implements OnInit {
   ngOnInit() {
     document.body.scrollTop = document.documentElement.scrollTop = 0;
     this.projectService.getProjects().subscribe(res => {
-      // this.projects = res.data.docs;
+      this.projects = res.data.docs;
       if (this.projects) {
         this.loaded = true;
       }
