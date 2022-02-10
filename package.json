@@ -31,7 +31,7 @@
     "core-js": "^2.6.5",
     "firebase": "^5.9.2",
     "ngx-toastr": "^9.2.0",
-    "node-sass": "^4.11.0",
+    "node-sass": "^7.0.0",
     "rxjs": "^6.4.0",
     "rxjs-compat": "^6.4.0",
     "typed.js": "^2.0.11",
